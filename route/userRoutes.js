@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const log = require("../key.js");
 const beer = require("../app/beerModel.js");
-/* mongoose.connect("mongodb://localhost:27017/beerDB", { useNewUrlParser: true }); */
-mongoose.connect(`mongodb://${log.auth.log}:${log.auth.pass}@ds135844.mlab.com:35844/beerdb`, { useNewUrlParser: true });
+/* heroku config:set MONGOLAB_URI=mongodb://admin:Moimoimoi1@ds135844.mlab.com:35844/beerdb */
+
+mongoose.connect(MONGOLAB_URI, { useNewUrlParser: true });
 
 module.exports = function (app) {
     //get all
