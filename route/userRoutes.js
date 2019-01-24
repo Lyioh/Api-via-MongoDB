@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const beer = require("../app/beerModel.js");
-/* heroku config:set MONGOLAB_URI=mongodb://admin:Moimoimoi1@ds135844.mlab.com:35844/beerdb */
 
 mongoose.connect(MONGOLAB_URI, { useNewUrlParser: true });
 
